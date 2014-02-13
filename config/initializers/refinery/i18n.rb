@@ -1,7 +1,7 @@
 # encoding: utf-8
 
 Refinery::I18n.configure do |config|
-  # config.default_locale = :en
+  config.default_locale = :vi
 
   config.current_locale = :vi
 
