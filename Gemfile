@@ -41,10 +41,13 @@ gem 'jquery-rails', '~> 2.3.0'
 # gem 'capistrano'
 
 # To use debugger
-# gem 'debugger'
+group :development do
+  gem 'debugger'
+  gem 'quiet_assets'
+end
 
 # Refinery CMS
-gem 'refinerycms', '~> 2.1.0'
+gem 'refinerycms', '~> 2.1.1'
 
 # Optionally, specify additional Refinery CMS Extensions here:
 gem 'refinerycms-acts-as-indexed', '~> 1.0.0'
