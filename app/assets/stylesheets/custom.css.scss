@@ -37,10 +37,21 @@ nav.menu {
 }
 
 #logo {
-  padding: 40px;
+  padding: 20px;
+  height: 100px;
+
+  img {
+    width: 100px;
+    height: 100px;
+    float: left;
+  }
+
   a {
     text-decoration: none;
     color: black;
+    float: left;
+    margin-top: 40px;
+    margin-left: 20px;
   }
 }
 
