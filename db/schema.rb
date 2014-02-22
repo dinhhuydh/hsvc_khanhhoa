@@ -130,6 +130,20 @@ ActiveRecord::Schema.define(:version => 20140216072750) do
   add_index "refinery_roles_users", ["role_id", "user_id"], :name => "index_refinery_roles_users_on_role_id_and_user_id"
   add_index "refinery_roles_users", ["user_id", "role_id"], :name => "index_refinery_roles_users_on_user_id_and_role_id"
 
+  create_table "refinery_settings", :force => true do |t|
+    t.string   "name"
+    t.text     "value"
+    t.boolean  "destroyable",     :default => true
+    t.string   "scoping"
+    t.boolean  "restricted",      :default => false
+    t.string   "form_value_type"
+    t.datetime "created_at",                         :null => false
+    t.datetime "updated_at",                         :null => false
+    t.string   "slug"
+  end
+
+  add_index "refinery_settings", ["name"], :name => "index_refinery_settings_on_name"
+
   create_table "refinery_user_plugins", :force => true do |t|
     t.integer "user_id"
     t.string  "name"
