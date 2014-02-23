@@ -6,18 +6,30 @@
   </head>
   <body id="<%= canonical_id @page %>">
     <%= site_bar -%>
-    <div id="page_container">
-      <header id="header">
-        <%= render "/refinery/header" -%>
-        <%= render "/refinery/shared/search" -%>
+    <div id="page_container" class='container-fluid'>
+      <header id="header" class='row'>
+        <div class='col-md-8'>
+          <%= render "/refinery/header" -%>
+        </div>
+        <div class='col-md-4 pull-right'>
+          <%= render "/refinery/shared/search" -%>
+        </div>
       </header>
-      <div class='clearfix'></div>
-      <%= image_tag 'slide.jpg' %>
-      <div class='clearfix'></div>
-      <%= Refinery::Pages::MenuPresenter.new(refinery_menu_pages, self).to_html %>
-      <section id="page">
-        <%= yield %>
-      </section>
+      <div class='row'>
+        <div class='col-md-8'>
+          <%= image_tag 'slide.jpg' %>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='col-md-2'>
+          <%= Refinery::Pages::MenuPresenter.new(refinery_menu_pages, self).to_html %>
+        </div>
+        <div class='col-md-8'>
+          <section id="page">
+            <%= yield %>
+          </section>
+        </div>
+      </div>
       <footer>
         <%= render "/refinery/footer" -%>
       </footer>

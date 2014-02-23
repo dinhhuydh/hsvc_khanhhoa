@@ -55,3 +55,4 @@ gem 'refinerycms-blog', '~> 2.1.0'
 #  gem 'refinerycms-inquiries', '~> 2.1.0'
 gem 'refinerycms-search', '~> 2.1.0'
 gem 'refinerycms-page-images', '~> 2.1.0'
+gem "refinerycms-bootstrap"
