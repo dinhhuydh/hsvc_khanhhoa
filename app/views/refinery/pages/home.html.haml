@@ -1,5 +1,6 @@
-- Refinery::Blog::Post.all.each do |post|
-  %div
-    %label= post.title
-    .preview= post.body.html_safe
+%ul#posts.col-md-6
+  - Refinery::Blog::Post.all.each do |post|
+    %li
+      .title= link_to post.title, blog_post_path(post)
+      .preview= post.body.html_safe
 
