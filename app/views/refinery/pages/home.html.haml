@@ -1,0 +1,6 @@
+- @page.images.each do |image|
+  = image_tag(image.thumbnail(geometry: '900x600').url)
+- Refinery::Blog::Post.all.each do |post|
+  %div
+    %label= post.title
+    .preview= post.body.html_safe
