@@ -1,0 +1,25 @@
+!!!
+%html
+  %body
+    = render "/refinery/html_tag"
+    - site_bar = render('/refinery/site_bar', :head => true)
+    = render "/refinery/head"
+    = site_bar
+    #page_container.container-fluid
+      %header#header.row
+        .col-md-8
+          = render "/refinery/header"
+        .col-md-4.pull-right
+          = render "/refinery/shared/search"
+      .row
+        #slider-wrapper.col-md-8
+          #slider.nivoSlider
+            - homepage_images.each do |image|
+              = image_tag image.thumbnail(geometry: '200x200#c').url
+      .row
+        .col-md-2
+          = Refinery::Pages::MenuPresenter.new(refinery_menu_pages, self).to_html
+        .col-md-8
+          %section#page= yield
+      %footer= render "/refinery/footer"
+    = render "/refinery/javascripts"

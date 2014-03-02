@@ -65,3 +65,17 @@ nav.menu {
 .row {
   margin-bottom: 15px;
 }
+
+#slider {
+  height: 400px;
+}
+
+#slider-wrapper {
+  width: 100%;
+  padding: 15px 15px 0px;
+  background-color: #b0ce38;
+
+  .nivo-controlNav {
+    padding: 0;
+  }
+}
