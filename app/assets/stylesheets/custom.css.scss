@@ -7,7 +7,6 @@ body {
 
 #body, #side_body {
   float: left;
-  width: 45%;
   background: white;
   color: #333;
   padding: 20px;
@@ -68,6 +67,11 @@ nav.menu {
 
 #slider {
   height: 400px;
+
+  img {
+    height: 400px;
+    width: 400px;
+  }
 }
 
 #slider-wrapper {
@@ -93,4 +97,26 @@ ul#posts {
       }
     }
   }
+}
+
+#main-content {
+  padding-top: 39px;
+}
+
+.container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 940px;
+}
+
+#header {
+  padding-bottom: 20px;
+}
+
+#footer {
+  padding-top: 120px;
+}
+
+.site-name {
+  margin-top: -8px;
 }
