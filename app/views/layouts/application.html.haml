@@ -21,9 +21,9 @@
     .clearfix
     #main-content
       .container-fluid
-        .col-md-4
+        .col-md-3
           = Refinery::Pages::MenuPresenter.new(refinery_menu_pages, self).to_html
-        .col-md-8
+        .col-md-9
           %section#page= yield
     #footer
       .container-fluid

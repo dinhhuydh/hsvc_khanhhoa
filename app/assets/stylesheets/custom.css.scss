@@ -9,7 +9,6 @@ body {
   float: left;
   background: white;
   color: #333;
-  padding: 20px;
 }
 
 #menu ul {
@@ -88,6 +87,8 @@ ul#posts {
   list-style-type: none;
 
   li {
+    margin-bottom: 40px;
+
     .title {
       margin-bottom: 20px;
 
