@@ -6,10 +6,12 @@
     = render "/refinery/head"
     = site_bar
     #page_container
+      #header-menu
+        .container-fluid
+          .col-md-6.pull-right
+            = Refinery::Pages::MenuPresenter.new(refinery_menu_pages, self).to_html
       #header
         .container-fluid
-          .col-md-3.pull-right
-            = render "/refinery/shared/search"
           .col-md-12
             = render "/refinery/header"
     - if homepage?
@@ -22,10 +24,7 @@
       .clearfix
     #main-content
       .container-fluid
-        - if homepage?
-          .col-md-3
-            = Refinery::Pages::MenuPresenter.new(refinery_menu_pages, self).to_html
-        .col-md-9
+        .col-md-12
           %section#page= yield
         - unless homepage?
           .col-md-3

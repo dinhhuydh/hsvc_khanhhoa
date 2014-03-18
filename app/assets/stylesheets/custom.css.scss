@@ -14,12 +14,15 @@ body {
 #menu ul {
   list-style-type: none;
   padding-left: 0;
+  width: 100%;
+  float: right;
+
+
   li {
-    border: 1px dotted black;
-    border-left: 4px solid black;
-    width: 200px;
+    display: inline;
+    float: left;
+
     a {
-      display: block;
       padding: 5px 10px;
       text-decoration: none;
     }
@@ -30,8 +33,7 @@ body {
 }
 
 nav.menu {
-  float: left;
-  margin-right: 100px;
+  float: right;
 }
 
 #logo {
@@ -114,6 +116,11 @@ ul#posts {
 #header {
   padding-bottom: 20px;
   border-bottom: 2px solid #b0ce38;
+}
+
+#header-menu {
+  padding: 5px 0;
+  background-color: #b0ce38;
 }
 
 #footer {
