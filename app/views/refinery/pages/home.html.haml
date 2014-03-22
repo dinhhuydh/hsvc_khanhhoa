@@ -1,6 +1,6 @@
 %ul#posts.col-md-12
   - Refinery::Blog::Post.all.each do |post|
-    %li.col-md-4
+    %li.col-md-5
       .title= link_to post.title, blog_post_path(post)
       .preview= post.body.html_safe
 
