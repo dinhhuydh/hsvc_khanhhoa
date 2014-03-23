@@ -2,5 +2,5 @@
   - Refinery::Blog::Post.all.each do |post|
     %li.col-md-5
       .title= link_to post.title, blog_post_path(post)
-      .preview= post.body.html_safe
+      .preview= post.body.truncate(300).html_safe
 
