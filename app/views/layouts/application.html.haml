@@ -26,9 +26,6 @@
       .container-fluid
         .col-md-12
           %section#page= yield
-        - unless homepage?
-          .col-md-3
-            this is image
     #footer
       .container-fluid
         = render "/refinery/footer"
